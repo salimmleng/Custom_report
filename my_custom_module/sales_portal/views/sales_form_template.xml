@@ -1,0 +1,56 @@
+<odoo>
+  <template id="sales_form_template" name="Custom Sales Form">
+        <t t-call="website.layout">
+            <div class="container mt-5">
+                <h2 class="text-center mb-4">Sales Order Form</h2>
+                <form action="/sales/submit" method="post">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+
+                    <div class="mb-3 w-50">
+                        <label class="form-label">Customer Name</label>
+                        <input type="text" name="customer_name" class="form-control"/>
+                    </div>
+                    <div class="mb-3 w-50">
+                        <label class="form-label">Email</label>
+                        <input type="email" name="email" class="form-control"/>
+                    </div>
+
+<!--                    <div class="mb-3 w-50">-->
+<!--                        <label class="form-label">Product Name</label>-->
+<!--                        <input type="text" name="product" class="form-control"/>-->
+<!--                    </div>-->
+
+                    <div class="mb-3 w-50">
+                  <label class="form-label">Product</label>
+                     <select name="product_id" class="form-select">
+                 <option value="">Search Product</option>
+                       <t t-foreach="products" t-as="product">
+                          <option t-att-value="product.id">
+                              <t t-esc="product.name"/>
+                                  </option>
+                             </t>
+                    </select>
+                    </div>
+
+                    <div class="mb-3 w-50">
+                        <label class="form-label">Quantity</label>
+                        <input type="number" name="quantity" class="form-control"/>
+                    </div>
+
+                    <button type="submit" class="btn btn-success">Submit Order</button>
+                </form>
+            </div>
+        </t>
+    </template>
+
+  <template id="sales_order_success" name="Sales Order Success">
+    <t t-call="website.layout">
+        <div class="container mt-5">
+            <div class="alert alert-success text-center">
+                <h4>✅ Sales Order Created!</h4>
+                <p>Your order <strong t-esc="sale_order.name"/> has been submitted.</p>
+            </div>
+        </div>
+    </t>
+</template>
+</odoo>

@@ -1,0 +1,18 @@
+<odoo>
+    <template id="sales_template" name="Hello Page">
+        <t t-call="website.layout">
+            <div class="container mt-5">
+                <h1 class="text-center text-danger">Hello! Welcome to my sales portal</h1>
+                <p class="text-center">I am a developer from <strong>Data Insight LLC</strong> 🇧🇩</p>
+                <div class="d-flex justify-content-center mt-4">
+                    <a href="/sales/order/form/" class="btn btn-lg text-white px-5 py-2"
+                       style="background: linear-gradient(to right, #ff8a00, #e52e71); border: none; font-weight: bold;">
+                        Create Sales order
+                    </a>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>
+
+

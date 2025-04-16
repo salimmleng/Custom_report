@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="sale_report_inherit" inherit_id="sale.report_saleorder_document">
+     <xpath expr="//div[@class='row mb-4']" position="after">
+         <div class="row mb-4" id="test_inherit">
+            <div class="col" name="informations_reference">
+                    <strong>Test report customization</strong>
+                    <strong>I  love odoo customization</strong>
+            </div>
+         </div>
+        </xpath>
+    </template>
+
+
+</odoo>
