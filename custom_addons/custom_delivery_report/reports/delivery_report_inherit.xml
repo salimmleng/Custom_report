@@ -2,6 +2,7 @@
 <odoo>
     <template id="delivery_report_inherit" inherit_id="stock.report_delivery_document">
         <xpath expr="//table[@name='stock_move_table']/thead/tr/th[@name='th_sm_quantity']" position="after">
+             <th name="th_sm_note" class="text-end">Cartoon Capacity</th>
             <th name="th_sm_note" class="text-end">Cartoon Quantity</th>
 
         </xpath>
@@ -11,9 +12,18 @@
             <td name="td_sm_cartoon_qty" class="text-end">
                 <t t-set="capacity" t-value="move.product_id.cartoon_capacity or 1"/>
                 <t>
+                    <t t-esc="capacity"/>
+                </t>
+            </td>
+
+            <td name="td_sm_cartoon_qty" class="text-end">
+                <t t-set="capacity" t-value="move.product_id.cartoon_capacity or 1"/>
+                <t>
                     <t t-esc="move.quantity / capacity"/>
                 </t>
             </td>
+
+
         </xpath>
 
     </template>
