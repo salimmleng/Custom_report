@@ -1,0 +1,15 @@
+<odoo>
+  <record id="view_product_form_cartoon_capacity" model="ir.ui.view">
+    <field name="name">product.product.form.inherit.cartoon.capacity</field>
+    <field name="model">product.product</field>
+    <field name="inherit_id" ref="product.product_normal_form_view"/>
+    <field name="arch" type="xml">
+      <xpath expr="//field[@name='barcode']" position="after">
+        <field name="cartoon_capacity"/>
+      </xpath>
+    </field>
+  </record>
+</odoo>
+
+
+

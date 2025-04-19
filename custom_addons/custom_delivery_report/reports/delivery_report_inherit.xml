@@ -3,31 +3,18 @@
     <template id="delivery_report_inherit" inherit_id="stock.report_delivery_document">
         <xpath expr="//table[@name='stock_move_table']/thead/tr/th[@name='th_sm_quantity']" position="after">
             <th name="th_sm_note" class="text-end">Cartoon</th>
-            <th name="th_sm_note" class="text-end">Cartoon capacity</th>
+
         </xpath>
 
-
-
-
-
-<!--        <td class="text-end">-->
-<!--            <span t-field="move.quantity">3.00</span>-->
-<!--            <span t-field="move.product_uom" groups="uom.group_uom">units</span>-->
-<!--            <span t-if="move.product_packaging_id">-->
-<!--                (<span t-field="move.product_packaging_quantity" t-options='{"widget": "integer"}'/> <span t-field="move.product_packaging_id"/>)-->
-<!--            </span>-->
-<!--        </td>-->
-
-
+        
     </template>
 </odoo>
 
 
 
-
 <!--     Table  er bahire content make-->
 
-<!--        <xpath expr="//div[@class='report-wrapping-flexbox clearfix row mb-4']" position="after">-->
+<!-- <xpath expr="//div[@class='report-wrapping-flexbox clearfix row mb-4']" position="after">-->
 <!--         <div class="col col-3 mw-100 mb-2" id="test_inherit">-->
 <!--             <strong>Shipping Date</strong>-->
 <!--         </div>-->
@@ -36,6 +23,7 @@
 <!--          </div>-->
 
 <!--        </xpath>-->
+
 
 
 
